@@ -1,5 +1,6 @@
 import "reflect-metadata";
 import express, { Request, Response } from "express";
+import cors from "cors";
 import { validate } from "class-validator";
 import db from "./db";
 import { Ad } from "./entities/ad";
@@ -8,8 +9,9 @@ import { Tag } from "./entities/tag";
 import { In, Like } from "typeorm";
 
 const app = express();
-const port = 3000;
+const port = 4000;
 
+app.use(cors())
 app.use(express.json());
 
 app.get("/tags", async (req: Request, res: Response) => {
