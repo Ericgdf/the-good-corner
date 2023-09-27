@@ -89,6 +89,7 @@ const Header = () => {
                 {
                     categoriesList.map((el) => (
                         <Categorieslist
+                            key={el.title}
                             href={el.href}
                             title={el.title}
                         />

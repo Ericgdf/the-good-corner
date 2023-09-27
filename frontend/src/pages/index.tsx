@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Layout from "@/components/Layout";
 import RecentAds from "@/components/RecentAds";
 import styles from "@/styles/Home.module.css";
 
@@ -7,8 +7,9 @@ export default function Home() {
     <>
    <body>
     <main className="main-content">
-      <Header></Header>
-      <RecentAds></RecentAds>
+     <Layout title="TGC - Home">
+        <RecentAds></RecentAds>
+      </Layout>
     </main>
   </body>
     </>
